@@ -1,0 +1,11 @@
+<include('../../application/index.marko') data=input>
+  <@main>
+    <div>
+      <h1>hello <%= name %></h1>
+      <p>
+        node version: ${input.node}<br>
+        v8 version: ${input.v8}
+      </p>
+    </div>
+  </@main>
+</include>

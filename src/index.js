@@ -1,3 +1,11 @@
 #!/usr/bin/env node
 
-console.log('konstructor-cli');
+const yargs = require('yargs');
+
+yargs.usage('$0 <cmd> [args]');
+
+yargs.commandDir('scripts');
+yargs.demandCommand();
+
+yargs.help();
+yargs.argv; // eslint-disable-line

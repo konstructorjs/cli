@@ -8,7 +8,7 @@
     "prepublish": "npm run compile",
     "compile": "babel --out-dir lib/ --copy-files src/",
     "test": "npm run lint",
-    "lint": "eslint *.js"
+    "lint": "eslint *.js src/*"
   },
   "files": [
     "lib"
@@ -37,7 +37,13 @@
     "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "inquirer": "^3.2.1",
+    "kopy": "^8.1.0",
+    "uuid": "^3.1.0",
+    "yargs": "^8.0.2"
+  },
   "bin": {
     "konstructor-cli": "lib/index.js"
   },

@@ -11,7 +11,8 @@
     "lint": "eslint *.js src/*"
   },
   "files": [
-    "lib"
+    "lib",
+    "blueprints"
   ],
   "repository": {
     "type": "git",

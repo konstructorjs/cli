@@ -14,12 +14,8 @@
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
-    "babel-brunch": "^6.1.1",
-    "brunch": "^2.10.10",
-    "clean-css-brunch": "^2.10.0",
-    "nodemon": "^1.11.0",
-    "sass-brunch": "^2.10.4",
-    "uglify-js-brunch": "^2.10.0"
+    "laravel-mix": "^1.4.2",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
     "knex": "^0.13.0",

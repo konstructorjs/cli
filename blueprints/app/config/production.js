@@ -10,9 +10,10 @@ module.exports = {
     },
   },
   assets: {
-    command: path.join(__dirname, '../node_modules/.bin/brunch'),
+    command: path.join(__dirname, '../node_modules/.bin/webpack'),
     options: [
-      'build',
+      '-p',
+      `--config=${path.join(__dirname, '../node_modules/laravel-mix/setup/webpack.config.js')}`,
     ],
     environment: {
     },

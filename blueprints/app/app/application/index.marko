@@ -7,23 +7,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/app.css">
+    <for(file in input.assets.css())> 
+      <link rel="stylesheet" type="text/css" href="/assets/css/${file}">
+    </for>
     <title><%= name %></title>
   </head>
 
   <body>
     <main role="main" id="app">
-      <if(input.data.flash)>
-        <for(error in input.data.flash)>
-          <div class="container">
-            ${error.message}
-          </div>
+      <if(input.flash)>
+        <for(error in input.flash)>
+          <h3>${error.message}</h3>
         </for>
       </if>
 
       <include(input.main) />
     </main>
 
-    <script type="text/javascript" src="/assets/js/app.js"></script>
+    <for(file in input.assets.js())> 
+      <script type="text/javascript" src="/assets/js/${file}"></script>
+    </for>
   </body>
 </html>

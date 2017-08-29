@@ -6,7 +6,9 @@
   "scripts": {
     "start": "konstructor start",
     "dev": "konstructor dev",
+    "clean": "konstructor clean",
     "build": "konstructor build",
+    "digest": "konstructor digest",
     "watch": "brunch watch"
   },
   "keywords": [],

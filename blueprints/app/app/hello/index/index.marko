@@ -1,4 +1,8 @@
-<include('../../application/index.marko') data=input>
+static {
+  const includeTarget = require(process.cwd() + '/app/application/index.marko');
+}
+
+<include(includeTarget, input)>
   <@main>
     <div>
       <h1>hello <%= name %></h1>

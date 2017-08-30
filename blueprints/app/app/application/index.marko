@@ -7,9 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <for(file in input.assets.css())> 
-      <link rel="stylesheet" type="text/css" href="/assets/css/${file}">
-    </for>
+    <import-stylesheets css=input.assets.css() />
     <title><%= name %></title>
   </head>
 
@@ -24,8 +22,6 @@
       <include(input.main) />
     </main>
 
-    <for(file in input.assets.js())> 
-      <script type="text/javascript" src="/assets/js/${file}"></script>
-    </for>
+    <import-javascripts js=input.assets.js() />
   </body>
 </html>

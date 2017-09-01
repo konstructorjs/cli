@@ -27,4 +27,4 @@ konstructor-cli new my-app
 ```
 
 ## Documentation/Guides
-You can find all of the documentation on [konstructor's website](https://konstructor.js.org/docs/konstructor-cli).
+You can find all of the documentation on [konstructor's website](https://konstructor.js.org/guides/konstructor-cli).

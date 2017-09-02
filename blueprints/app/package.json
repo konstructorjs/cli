@@ -22,7 +22,7 @@
   "dependencies": {
     "knex": "^0.13.0",
     "konstructor": "^1.0.0",
-    "konstructor-essentials": "^0.0.1",
+    "konstructor-essentials": "^1.0.0",
     "marko": "^4.4.22",
     "pg": "^7.1.0"
   }

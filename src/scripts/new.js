@@ -5,6 +5,8 @@ const inquirer = require('inquirer');
 const kopy = require('kopy');
 const uuidV4 = require('uuid/v4');
 
+const { logBase, logChild } = require('../utils/logger');
+
 const create = async (args) => {
   const rawName = args.name;
   const name = rawName.replace(/[^0-9a-z-]/gi, '');
@@ -39,7 +41,8 @@ const create = async (args) => {
     throw new Error('unable to create folder.');
   }
 
-  console.log(chalk.bgBlue(chalk.black(' generating project ')));
+  logBase('generating project');
+  console.log();
 
   const developmentSecretKeyBase = uuidV4();
   const files = await kopy(path.join(__dirname, '../../blueprints/app'), name, {
@@ -51,20 +54,26 @@ const create = async (args) => {
     },
   });
 
+  const greenCreate = chalk.green('[create]');
   files.fileList.forEach((file) => {
     if (file === '..gitignore') {
       fs.renameSync(path.join(name, file), path.join(name, '.gitignore'));
-      console.log(chalk.bgGreen(chalk.black('\t [create] .gitignore ')));
+      logChild(`${greenCreate} .gitignore`);
     } else {
-      console.log(chalk.bgGreen(chalk.black(`\t [create] ${file} `)));
+      logChild(`${greenCreate} ${file}`);
     }
   });
 
-  console.log(chalk.bgBlue(chalk.black(' getting started ')));
-  console.log(chalk.bgGreen(chalk.black(`\t [run] cd ${name} `)));
-  console.log(chalk.bgGreen(chalk.black('\t [run] npm install ')));
-  console.log(chalk.bgGreen(chalk.black('\t [run] npm run dev ')));
-  console.log(chalk.bgGreen(chalk.black('\t [visit] http://localhost:3000 ')));
+  const greenRun = chalk.green('[run]');
+  const greenVisit = chalk.green('[visit]');
+
+  logBase('getting started');
+  logChild(`${greenRun} cd ${name}`);
+  logChild(`${greenRun} npm install`);
+  logChild(`${greenRun} npm run dev`);
+  logChild(`${greenVisit} http://localhost:3000`);
+
+  console.log();
   process.exit(0);
 };
 

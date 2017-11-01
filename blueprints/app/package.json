@@ -25,9 +25,5 @@
     "konstructor-essentials": "^1.0.0",
     "marko": "^4.4.22",
     "pg": "^7.1.0"
-  },
-  "kolony": {
-    "pre-build": "npm run clean",
-    "post-build": "npm run digest"
   }
 }

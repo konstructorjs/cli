@@ -8,16 +8,18 @@
     "dev": "konstructor dev",
     "clean": "konstructor clean",
     "build": "konstructor build",
-    "digest": "konstructor digest",
-    "watch": "brunch watch"
+    "digest": "konstructor digest"
   },
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
   "private": true,
   "devDependencies": {
-    "laravel-mix": "^1.4.2",
-    "nodemon": "^1.11.0"
+    "babel-brunch": "^6.1.1",
+    "brunch": "^2.10.12",
+    "clean-css-brunch": "^2.10.0",
+    "nodemon": "^1.11.0",
+    "sass-brunch": "^2.10.4"
   },
   "dependencies": {
     "knex": "^0.13.0",
@@ -25,9 +27,5 @@
     "konstructor-essentials": "^1.0.0",
     "marko": "^4.4.22",
     "pg": "^7.1.0"
-  },
-  "kolony": {
-    "pre-build": "npm run clean",
-    "post-build": "npm run digest"
   }
 }

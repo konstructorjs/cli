@@ -12,12 +12,10 @@ module.exports = {
     },
   },
   assets: {
-    command: path.join(__dirname, '../node_modules/.bin/webpack'),
+    command: path.join(__dirname, '../node_modules/.bin/brunch'),
     options: [
-      '--watch',
-      '--colors',
-      '--hide-modules',
-      `--config=${path.join(__dirname, '../node_modules/laravel-mix/setup/webpack.config.js')}`,
+      'watch',
+      '--stdin',
     ],
     environment: {
     },

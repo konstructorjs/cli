@@ -1,0 +1,16 @@
+language: node_js
+node_js: lts/*
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - npm test
+
+deploy:
+  - npm run travis-deploy-once "npm run semantic-release"
+  branches: master

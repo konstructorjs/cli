@@ -5,7 +5,7 @@ const inquirer = require('inquirer');
 const kopy = require('kopy');
 const uuidV4 = require('uuid/v4');
 
-const { logBase, logChild } = require('../utils/logger');
+const { logBase, logChild, logError } = require('../utils/logger');
 
 const create = async (args) => {
   const rawName = args.name;
@@ -42,7 +42,6 @@ const create = async (args) => {
   }
 
   logBase('generating project');
-  console.log();
 
   const developmentSecretKeyBase = uuidV4();
   const files = await kopy(path.join(__dirname, '../../blueprints/app'), name, {
@@ -86,6 +85,8 @@ module.exports.builder = {
 };
 module.exports.handler = (args) => {
   create(args).catch((err) => {
-    console.log(chalk.red(err));
+    logError(`${err}`);
+    console.log();
+    process.exit(1);
   });
 };

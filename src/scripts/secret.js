@@ -1,11 +1,11 @@
-
-const chalk = require('chalk');
 const uuidV4 = require('uuid/v4');
+const { logBase, logChild, logError } = require('../utils/logger');
 
 const secret = async () => {
+  logBase('generating key');
   const key = uuidV4();
-  console.log();
-  console.log(key);
+  logChild('key generated');
+  logChild(key);
   console.log();
 };
 
@@ -14,6 +14,8 @@ module.exports.desc = 'generate a secret key';
 
 module.exports.handler = () => {
   secret().catch((err) => {
-    console.log(chalk.red(err));
+    logError(`${err}`);
+    console.log();
+    process.exit(1);
   });
 };

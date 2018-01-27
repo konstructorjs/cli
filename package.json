@@ -9,7 +9,7 @@
     "compile": "babel --out-dir lib/ --copy-files src/",
     "test": "npm run lint",
     "lint": "eslint *.js src/*",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib",
@@ -33,19 +33,19 @@
   },
   "homepage": "https://github.com/konstructorjs/konstructor-cli#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "condition-circle": "^1.5.0",
-    "eslint": "^4.4.1",
-    "eslint-config-airbnb-base": "^11.3.1",
-    "eslint-plugin-import": "^2.7.0",
-    "semantic-release": "^6.3.6"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "condition-circle": "^1.6.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.8.0",
+    "semantic-release": "^12.2.5"
   },
   "dependencies": {
-    "chalk": "^2.1.0",
-    "inquirer": "^3.2.1",
-    "kopy": "^8.1.0",
-    "uuid": "^3.1.0",
+    "chalk": "^2.3.0",
+    "inquirer": "^3.3.0",
+    "kopy": "^8.2.5",
+    "uuid": "^3.2.1",
     "yargs": "^8.0.2"
   },
   "bin": {

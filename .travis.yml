@@ -11,6 +11,9 @@ install:
 script:
   - npm test
 
-deploy:
+after_success:
   - npm run travis-deploy-once "npm run semantic-release"
-  branches: master
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

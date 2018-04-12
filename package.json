@@ -1,5 +1,5 @@
 {
-  "name": "konstructor-cli",
+  "name": "@konstructor/cli",
   "version": "0.0.0-development",
   "description": "a cli for konstructor",
   "main": "lib",
@@ -36,16 +36,18 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "eslint": "^4.16.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^11.3.2",
-    "eslint-plugin-import": "^2.8.0",
-    "semantic-release": "^12.2.5",
-    "travis-deploy-once": "^4.3.3"
+    "eslint-plugin-import": "^2.10.0",
+    "semantic-release": "^12.4.1",
+    "travis-deploy-once": "^4.4.1"
   },
   "dependencies": {
-    "chalk": "^2.3.0",
-    "inquirer": "^3.3.0",
-    "kopy": "^8.2.5",
+    "chalk": "^2.3.2",
+    "ejs": "^2.5.8",
+    "glob": "^7.1.2",
+    "nodegit": "^0.22.0",
+    "rimraf": "^2.6.2",
     "uuid": "^3.2.1",
     "yargs": "^8.0.2"
   },
@@ -53,7 +55,10 @@
     "konstructor-cli": "lib/index.js"
   },
   "engines": {
-    "node": ">=7.6.0",
-    "npm": ">=4.0.0"
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
